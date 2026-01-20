@@ -1,0 +1,81 @@
+﻿# 🎮 ELDRITCH HUNTER
+
+Survival shooter on Farcaster • Built with Next.js + TypeScript
+
+## 🚀 LIVE DEMO
+- **Main URL**: https://my-farcaster-game-gilt.vercel.app
+- **Farcaster Frame**: Works in Warpcast
+- **Game**: https://my-farcaster-game-gilt.vercel.app/game.html
+
+## 🎯 FEATURES
+- ✅ Fullscreen HTML5 shooter game
+- ✅ Farcaster Frame & Mini App compatible
+- ✅ Monster hunting with score system
+- ✅ Health & ammo management
+- ✅ Beautiful neon UI with CRT effects
+- ✅ Share scores to Farcaster
+
+## 🕹️ CONTROLS
+- **WASD / Arrow Keys** - Move
+- **Click / Space** - Shoot
+- **R** - Reload
+- **ESC** - Pause/Menu
+
+## 🛠️ TECH STACK
+- **Frontend**: Next.js 14, TypeScript, Tailwind CSS
+- **Game**: HTML5 Canvas, Pure JavaScript
+- **Deployment**: Vercel
+- **Blockchain**: Farcaster Frames
+
+## 🔗 FARCASTER INTEGRATION
+The game is fully compatible with:
+- Farcaster Frames v1
+- Farcaster Mini Apps (Actions)
+- Warpcast native launch
+
+## 📦 LOCAL DEVELOPMENT
+```bash
+git clone https://github.com/your-username/eldritch-hunter.git
+cd eldritch-hunter
+npm install
+npm run dev
+
+cd "C:\game"
+
+# 1. Создаём специальный HTML файл для Farcaster краулера
+mkdir -Force "public\frame"
+
+@'
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eldritch Hunter</title>
+    <meta property="fc:frame" content='{"version":"1","imageUrl":"https://og-playground.vercel.app/api/gradient?title=ELDRITCH%20HUNTER&description=Survival%20shooter%20on%20Farcaster&color1=0a0a0a&color2=1a1a2e&textColor=00ff88&width=1200&height=800","button":{"title":"🎮 Hunt Monsters","action":{"type":"launch_frame","url":"https://my-farcaster-game-gilt.vercel.app","name":"Eldritch Hunter","splashImageUrl":"https://my-farcaster-game-gilt.vercel.app/icon.png","splashBackgroundColor":"#000000"}}}' />
+    
+    <meta property="fc:miniapp" content='{"version":"1","imageUrl":"https://og-playground.vercel.app/api/gradient?title=ELDRITCH%20HUNTER&description=Survival%20shooter%20on%20Farcaster&color1=0a0a0a&color2=1a1a2e&textColor=00ff88&width=1200&height=800","button":{"title":"🎮 Hunt Monsters","action":{"type":"launch_miniapp","url":"https://my-farcaster-game-gilt.vercel.app","name":"Eldritch Hunter","splashImageUrl":"https://my-farcaster-game-gilt.vercel.app/icon.png","splashBackgroundColor":"#000000"}}}' />
+    
+    <meta property="og:title" content="Eldritch Hunter" />
+    <meta property="og:description" content="Survival shooter on Farcaster" />
+    <meta property="og:image" content="https://og-playground.vercel.app/api/gradient?title=ELDRITCH%20HUNTER&description=Survival%20shooter%20on%20Farcaster&color1=0a0a0a&color2=1a1a2e&textColor=00ff88&width=1200&height=800" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:url" content="https://my-farcaster-game-gilt.vercel.app" />
+    <meta property="og:type" content="website" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Eldritch Hunter" />
+    <meta name="twitter:description" content="Survival shooter on Farcaster" />
+    <meta name="twitter:image" content="https://og-playground.vercel.app/api/gradient?title=ELDRITCH%20HUNTER&description=Survival%20shooter%20on%20Farcaster&color1=0a0a0a&color2=1a1a2e&textColor=00ff88&width=1200&height=800" />
+    
+    <script src="https://cdn.farcaster.xyz/actions.js"></script>
+    
+    <meta http-equiv="refresh" content="0;url=https://my-farcaster-game-gilt.vercel.app/game.html">
+</head>
+<body>
+    <h1>Eldritch Hunter - Farcaster Frame</h1>
+    <p>Redirecting to game...</p>
+    <script>
+        window.location.href = "https://my-farcaster-game-gilt.vercel.app/game.html";
+    </script>
+</body>
+</html>
