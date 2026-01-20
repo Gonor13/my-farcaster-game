@@ -1,9 +1,16 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eldritch Hunter</title>
-    <meta property="fc:frame" content='{"version":"1","imageUrl":"https://og-playground.vercel.app/api/gradient?title=ELDRITCH%20HUNTER&description=Survival%20shooter%20on%20Farcaster&color1=0a0a0a&color2=1a1a2e&textColor=00ff88&width=1200&height=630","button":{"title":"🎮 Hunt Monsters","action":{"type":"launch_frame","url":"https://my-farcaster-game-gilt.vercel.app"}}}'>
-    <meta property="fc:miniapp" content='{"version":"1","imageUrl":"https://og-playground.vercel.app/api/gradient?title=ELDRITCH%20HUNTER&description=Survival%20shooter%20on%20Farcaster&color1=0a0a0a&color2=1a1a2e&textColor=00ff88&width=1200&height=630","button":{"title":"🎮 Hunt Monsters","action":{"type":"launch_frame","url":"https://my-farcaster-game-gilt.vercel.app"}}}'>
+    
+    <!-- FARCASTER FRAME TAGS -->
+    <meta property="fc:frame" content='{"version":"1","imageUrl":"https://og-playground.vercel.app/api/gradient?title=ELDRITCH%20HUNTER&description=Survival%20shooter%20on%20Farcaster&color1=0a0a0a&color2=1a1a2e&textColor=00ff88&width=1200&height=630","button":{"title":"🎮 Hunt Monsters","action":{"type":"launch_frame","url":"https://my-farcaster-game-gilt.vercel.app/game.html"}}}'>
+    
+    <meta property="fc:miniapp" content='{"version":"1","imageUrl":"https://og-playground.vercel.app/api/gradient?title=ELDRITCH%20HUNTER&description=Survival%20shooter%20on%20Farcaster&color1=0a0a0a&color2=1a1a2e&textColor=00ff88&width=1200&height=630","button":{"title":"🎮 Hunt Monsters","action":{"type":"launch_frame","url":"https://my-farcaster-game-gilt.vercel.app/game.html"}}}'>
+    
+    <!-- OPEN GRAPH -->
     <meta property="og:title" content="Eldritch Hunter">
     <meta property="og:description" content="Survival shooter on Farcaster">
     <meta property="og:image" content="https://og-playground.vercel.app/api/gradient?title=ELDRITCH%20HUNTER&description=Survival%20shooter%20on%20Farcaster&color1=0a0a0a&color2=1a1a2e&textColor=00ff88&width=1200&height=630">
@@ -11,15 +18,165 @@
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://my-farcaster-game-gilt.vercel.app">
     <meta property="og:type" content="website">
+    
+    <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Eldritch Hunter">
     <meta name="twitter:description" content="Survival shooter on Farcaster">
     <meta name="twitter:image" content="https://og-playground.vercel.app/api/gradient?title=ELDRITCH%20HUNTER&description=Survival%20shooter%20on%20Farcaster&color1=0a0a0a&color2=1a1a2e&textColor=00ff88&width=1200&height=630">
+    
+    <!-- FARCASTER SDK -->
     <script src="https://cdn.farcaster.xyz/actions.js"></script>
-    <meta http-equiv="refresh" content="0;url=/game.html">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #0a0a0a;
+            color: #00ff88;
+            font-family: 'Courier New', monospace;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            background: rgba(0, 20, 10, 0.8);
+            border: 3px solid #00ff88;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 50px rgba(0, 255, 136, 0.3);
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px #00ff88;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #88ff88;
+            margin-bottom: 40px;
+        }
+        
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .btn-primary {
+            background: #00ff88;
+            color: black;
+        }
+        
+        .btn-primary:hover {
+            background: #00cc66;
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.7);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #00ff88;
+            border: 3px solid #00ff88;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(0, 255, 136, 0.1);
+            transform: scale(1.05);
+        }
+        
+        .info {
+            margin-top: 40px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            .btn {
+                padding: 15px 30px;
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Eldritch Hunter Farcaster Frame</h1>
-    <p>Redirecting to game...</p>
+    <div class="container">
+        <h1>🎮 ELDRITCH HUNTER</h1>
+        <div class="subtitle">Survival shooter on Farcaster • Base Network</div>
+        
+        <div class="buttons">
+            <a href="/game.html" class="btn btn-primary">
+                🚀 PLAY GAME NOW
+            </a>
+            
+            <a href="https://base.org/portal" target="_blank" class="btn btn-secondary">
+                📱 BASE PORTAL
+            </a>
+            
+            <a href="https://warpcast.com/~/developers/frames" target="_blank" class="btn btn-secondary">
+                🔗 FRAME VALIDATOR
+            </a>
+        </div>
+        
+        <div style="margin: 30px 0; padding: 20px; background: rgba(0,0,0,0.5); border-radius: 10px;">
+            <h3 style="margin-bottom: 15px; color: #00ff88;">🎯 CONTROLS</h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; text-align: left;">
+                <div>WASD / Arrows</div><div>← Move</div>
+                <div>Click / Space</div><div>← Shoot</div>
+                <div>R Key</div><div>← Reload</div>
+                <div>ESC / P</div><div>← Pause</div>
+            </div>
+        </div>
+        
+        <div class="info">
+            <p>Farcaster Frame & Mini App ready • Connect your wallet to earn rewards</p>
+            <p style="margin-top: 10px; font-size: 12px;">
+                Frame URL: https://my-farcaster-game-gilt.vercel.app<br>
+                Game URL: https://my-farcaster-game-gilt.vercel.app/game.html
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Авто-редирект на игру через 10 секунд
+        setTimeout(() => {
+            window.location.href = '/game.html';
+        }, 10000);
+    </script>
 </body>
 </html>

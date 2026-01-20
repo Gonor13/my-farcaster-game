@@ -17,10 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* ВСЕ мета-теги теперь в public/index.html */}
+        {/* ВСЕ мета-теги в public/index.html */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className={inter.className}>
         {children}
       </body>
     </html>
