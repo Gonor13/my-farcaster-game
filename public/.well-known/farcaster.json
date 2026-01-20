@@ -1,4 +1,4 @@
-{
+﻿{
   "accountAssociation": {
     "header": "eyJmaWQiOjMzODQ1MSwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDc4NDRENDM0NzMzOTM1OTRENWQwM2NkZDUzRDU0RDdGY0RmMzk5RTUifQ",
     "payload": "eyJkb21haW4iOiJteS1mYXJjYXN0ZXItZ2FtZS1naWx0LnZlcmNlbC5hcHAifQ",
@@ -6,5 +6,5 @@
   },
   "name": "Eldritch Hunter",
   "icon": "https://my-farcaster-game-gilt.vercel.app/icon.png",
-  "homeUrl": "https://my-farcaster-game-gilt.vercel.app/farcaster-preview.html"
+  "homeUrl": "https://my-farcaster-game-gilt.vercel.app"
 }
