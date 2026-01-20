@@ -17,28 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Base Portal требует ЭТОТ ФОРМАТ */}
-        <meta property="fc:frame" content="{"version":"1","imageUrl":"https://og-playground.vercel.app/api/gradient?title=ELDRITCH%20HUNTER&description=Survival%20shooter%20on%20Farcaster&color1=0a0a0a&color2=1a1a2e&textColor=00ff88&width=1200&height=630","button":{"title":"🎮 Hunt Monsters","action":{"type":"launch_frame","url":"https://my-farcaster-game-gilt.vercel.app"}}}" />
-        
-        <meta property="fc:miniapp" content="{"version":"1","imageUrl":"https://og-playground.vercel.app/api/gradient?title=ELDRITCH%20HUNTER&description=Survival%20shooter%20on%20Farcaster&color1=0a0a0a&color2=1a1a2e&textColor=00ff88&width=1200&height=630","button":{"title":"🎮 Hunt Monsters","action":{"type":"launch_frame","url":"https://my-farcaster-game-gilt.vercel.app"}}}" />
-        
-        {/* OG теги - ОБЯЗАТЕЛЬНО */}
-        <meta property="og:title" content="Eldritch Hunter" />
-        <meta property="og:description" content="Survival shooter on Farcaster" />
-        <meta property="og:image" content="https://og-playground.vercel.app/api/gradient?title=ELDRITCH%20HUNTER&description=Survival%20shooter%20on%20Farcaster&color1=0a0a0a&color2=1a1a2e&textColor=00ff88&width=1200&height=630" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:url" content="https://my-farcaster-game-gilt.vercel.app" />
-        <meta property="og:type" content="website" />
-        
-        {/* Twitter теги */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Eldritch Hunter" />
-        <meta name="twitter:description" content="Survival shooter on Farcaster" />
-        <meta name="twitter:image" content="https://og-playground.vercel.app/api/gradient?title=ELDRITCH%20HUNTER&description=Survival%20shooter%20on%20Farcaster&color1=0a0a0a&color2=1a1a2e&textColor=00ff88&width=1200&height=630" />
-        
+        {/* ВСЕ мета-теги теперь в public/index.html */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="https://cdn.farcaster.xyz/actions.js" async></script>
       </head>
       <body className={`${inter.className} antialiased`}>
         {children}
